@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert to Roman</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Convertir Numero a Romano</h2>
+    <form method="POST">
+        <input type="number" name="number" placeholder="Digitar numero" required>
+        <button type="submit">Convertir</button>
+    </form>
+    {% if roman %}
+        <h3>Numero Romano: {{ roman }}</h3>
+    {% endif %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
